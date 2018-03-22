@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="e164d3ba-7fc7-4277-88e5-ca50018d438f"
+  name="Exercice2" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <subsystem
+        Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+        name="Agence de voyage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="21f6c3a2-96d0-407a-9648-644b995aa101"
+        name="Agent de Voyage"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="06a8691c-58b4-4b8c-b3c9-5a259286b4c3"
+            isDerived="false"
+            sourceEndRoleName="Agent de Voyage"
+            targetEndRoleName="Organiser voyage"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8dea8031-7f88-45ba-8569-249f7b40b6b3"
+              LastKnownName="Organiser voyage"
+              LastKnownLocation="Exercice2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4194e0f8-386a-4598-a8a8-1b3e24b59abc"
+                  name="Agent de Voyage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6532f7b3-9863-49cb-bc27-5dc307f7344d"
+                  name="Organiser voyage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0e2e493e-ca19-4750-b8fa-5e73092c3c44"
+        name="Réserver chambre d'hôtel"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e74e8a9d-4f43-476c-bb52-46d31fb1c990"
+        name="Réserver taxi"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3825fa9d-e4a2-4b4d-bed4-d174f1498639"
+        name="Réserver billet"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8dea8031-7f88-45ba-8569-249f7b40b6b3"
+        name="Organiser voyage"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="3f233a4c-13b9-4660-836f-a2055bc8c492">
+            <useCaseMoniker
+              Id="30a5b02e-515e-473d-951b-23d13fd7ced9"
+              LastKnownName="Facture détaillée"
+              LastKnownLocation="Exercice2.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="0b00b2d8-d8d6-4819-a5ae-d2b5f189415d">
+            <useCaseMoniker
+              Id="0e2e493e-ca19-4750-b8fa-5e73092c3c44"
+              LastKnownName="Réserver chambre d'hôtel"
+              LastKnownLocation="Exercice2.uml" />
+          </include>
+          <include
+            Id="a415f5b2-0daa-40d6-ba72-7071cf684650">
+            <useCaseMoniker
+              Id="e74e8a9d-4f43-476c-bb52-46d31fb1c990"
+              LastKnownName="Réserver taxi"
+              LastKnownLocation="Exercice2.uml" />
+          </include>
+          <include
+            Id="4152328f-ee86-4a25-8897-75c98a8491b0">
+            <useCaseMoniker
+              Id="3825fa9d-e4a2-4b4d-bed4-d174f1498639"
+              LastKnownName="Réserver billet"
+              LastKnownLocation="Exercice2.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="9f63a29e-3441-4a42-a089-8c8b49240ce1"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="30a5b02e-515e-473d-951b-23d13fd7ced9"
+        name="Facture détaillée"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1854b38a-6ced-4f4a-9010-b1f022801fd8"
+        name="Billet Train"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="349e8509-0917-46e8-bdcd-417e1c81413f"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="3825fa9d-e4a2-4b4d-bed4-d174f1498639"
+              LastKnownName="Réserver billet"
+              LastKnownLocation="Exercice2.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5da0933d-aa2d-4930-9041-3547f92a348b"
+        name="Billet Avion"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="d328d0a7-9a42-4de3-9944-221c86540606"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="3825fa9d-e4a2-4b4d-bed4-d174f1498639"
+              LastKnownName="Réserver billet"
+              LastKnownLocation="Exercice2.uml" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="d2d5f271-36cf-4c13-a93c-fdd3f86a693b"
+            LastKnownName="Agence de voyage"
+            LastKnownLocation="Exercice2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
